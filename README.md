@@ -16,6 +16,7 @@ This project renders satellites orbiting Earth in a 3D view, with support for fe
 
 ---
 
+<<<<<<< HEAD
 
 ## Installation
 
@@ -50,9 +51,12 @@ python earth_orbital_viewer.py
 ---
 
 ## Development Notesg
+=======
+## Development Notes
+>>>>>>> 1a251f3d441f08b0aae5b3b7fa7ba19953166ffb
 
-- **Current propagation**: via [`cysgp4`](https://pypi.org/project/cysgp4/).  
-- **Planned**: Switchable backend for the custom `sgp4_lib_cpp/` engine for more performance and flexibility.  
+- **Current propagation**: via [`cysgp4`](https://pypi.org/project/cysgp4/). (Cython)
+- **Planned**: Switchable backend to Dan Warner's `sgp4_lib_cpp/` engine for more performance and flexibility.  
 
 
 ---
@@ -61,7 +65,6 @@ python earth_orbital_viewer.py
 
 - Time controls (fast-forward, rewind, pause).  
 - Ground track visualization on Earth’s surface.  
-
 - User interface for satellite selection and data display.  
 
 ---
