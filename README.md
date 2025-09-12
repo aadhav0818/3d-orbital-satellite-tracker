@@ -16,39 +16,6 @@ This project renders satellites orbiting Earth in a 3D view, with support for fe
 
 ---
 
-
-## Installation
-
-1. **Clone the repository**  
-   ```bash
-   git clone https://github.com/aadhav0818/3d-orbital-satellite-tracker.git
-   cd 3d-orbital-satellite-tracker
-   ```
-
-2. **Install dependencies**  
-   Make sure you have Python 3.10+ installed, then run:
-   
- 
-   ```bash
-   pip install numpy matplotlib cysgp4
-   ```
-
----
-
-## Usage
-
-Run the main visualization:
-
-```bash
-python earth_orbital_viewer.py
-```
-
-- By default, the program will load cached TLEs from `tle_cache/active.txt`.  
-- To use fresh data, download new TLEs (e.g. from [CelesTrak](https://celestrak.org/NORAD/elements/)) and replace the file.  
-- The satellites will propagate in real-time using `cysgp4` and display around a textured Earth.
-
----
-
 ## Development Notes
 
 - **Current propagation**: via [`cysgp4`](https://pypi.org/project/cysgp4/).  
