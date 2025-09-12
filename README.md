@@ -18,8 +18,8 @@ This project renders satellites orbiting Earth in a 3D view, with support for fe
 
 ## Development Notes
 
-- **Current propagation**: via [`cysgp4`](https://pypi.org/project/cysgp4/).  
-- **Planned**: Switchable backend for the custom `sgp4_lib_cpp/` engine for more performance and flexibility.  
+- **Current propagation**: via [`cysgp4`](https://pypi.org/project/cysgp4/). (Cython)
+- **Planned**: Switchable backend to Dan Warner's `sgp4_lib_cpp/` engine for more performance and flexibility.  
 
 
 ---
