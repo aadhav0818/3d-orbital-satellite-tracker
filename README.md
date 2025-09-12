@@ -28,7 +28,6 @@ This project renders satellites orbiting Earth in a 3D view, with support for fe
 
 - Time controls (fast-forward, rewind, pause).  
 - Ground track visualization on Earth’s surface.  
-
 - User interface for satellite selection and data display.  
 
 ---
