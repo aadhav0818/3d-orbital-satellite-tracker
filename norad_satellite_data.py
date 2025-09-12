@@ -104,3 +104,6 @@ class SatelliteManager:
         #     print(f"Position (km): {pos}")
         #     print(f"Velocity (km/s): {vel}")
         #     print()
+
+    def get_satellite_count(self):
+        return len(self.satellites)

@@ -49,7 +49,7 @@ python earth_orbital_viewer.py
 
 ---
 
-## Development Notes
+## Development Notesg
 
 - **Current propagation**: via [`cysgp4`](https://pypi.org/project/cysgp4/).  
 - **Planned**: Switchable backend for the custom `sgp4_lib_cpp/` engine for more performance and flexibility.  

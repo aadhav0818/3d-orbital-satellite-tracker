@@ -32,8 +32,9 @@ class OpenGL_Window(QOpenGLWidget):
         self.timer.start(self.refresh_rate)
 
         self.tle_fetcher = TLEFetcher()
+        self.visibility_limit = 100
 
-        CURRENT_GROUP = "active" # remove and re implement later)
+        CURRENT_GROUP = "starlink" # remove and re implement later)
 
         self.sat_manager = SatelliteManager(self.tle_fetcher, CURRENT_GROUP)
         self.sat_manager.load_tles()
@@ -81,8 +82,13 @@ class OpenGL_Window(QOpenGLWidget):
         projection = glGetDoublev(GL_PROJECTION_MATRIX)
         viewport = glGetIntegerv(GL_VIEWPORT)
 
-        for sat in self.sat_manager.satellites:
-            sat.render_satellite(modelview, projection, viewport)
+        if self.sat_manager.get_satellite_count() > self.visibility_limit:
+            for sat in self.sat_manager.satellites[0:self.visibility_limit]:
+                sat.render_satellite(modelview, projection, viewport)
+
+        else:
+            for sat in self.sat_manager.satellites[0:self.visibility_limit]:
+                sat.render_satellite(modelview, projection, viewport)
 
         glPopMatrix()
 
@@ -220,9 +226,14 @@ class OpenGL_Window(QOpenGLWidget):
     
 
     def update_frame(self):
-        for sat in self.sat_manager.satellites:
-            sat.update_position(self.refresh_rate * 0.001)
-        
+
+        if self.sat_manager.get_satellite_count() > self.visibility_limit:
+            for sat in self.sat_manager.satellites[0:self.visibility_limit]:
+                sat.update_position(self.refresh_rate * 0.001)
+        else:
+            for sat in self.sat_manager.satellites:
+                sat.update_position(self.refresh_rate * 0.001)
+
         self.update()
 
 class MainWindow(QMainWindow):
