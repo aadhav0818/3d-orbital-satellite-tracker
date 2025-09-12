@@ -40,5 +40,4 @@ class Satellite:
 
         winX, winY, winZ = gluProject(scaled_pos[0], scaled_pos[1], scaled_pos[2], modelview, projection, viewport)
 
-        self.screen_pos = (winX, viewport[3] - winY + 14)  # +12 = hover above
-        
+        self.screen_pos = (winX, viewport[3] - winY + 14)
