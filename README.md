@@ -2,7 +2,7 @@
 
 A 3D orbital visualization tool for simulating and viewing satellite motion around Earth using **TLE data** and the **SGP4 model** (via [`cysgp4`](https://pypi.org/project/cysgp4/)).
 
-This project renders satellites orbiting Earth in a 3D view, with support for fetching NORAD TLEs, propagating positions in real-time, and visualizing them against Earth and star textures.
+This project renders satellites orbiting Earth in a 3D view, with support for fetching NORAD TLEs, propagating positions in real-time, and visualizing them against Earth and star textures. All tracking is real-time and shows a very accurate prediction of where the satellite is within its orbit. Satellites are re-corrected every 12 hours with real-time data from CelesTrak 
 
 ---
 
